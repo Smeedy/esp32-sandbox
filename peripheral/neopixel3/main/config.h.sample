@@ -1,0 +1,44 @@
+/*
+ * config.h
+ *
+ *  Created on: 26 Apr 2017
+ *      Author: smeedy
+ */
+
+#ifndef MAIN_CONFIG_H_
+#define MAIN_CONFIG_H_
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#include <freertos/FreeRTOS.h>
+#include <freertos/event_groups.h>
+#include <driver/gpio.h>
+
+#ifdef __cplusplus
+extern "C" EventGroupHandle_t app_event_group;
+#else
+EventGroupHandle_t app_event_group;
+#endif
+
+// ---
+
+#define CONFIG_WIFI_SSID "Your SSID"
+#define CONFIG_WIFI_PASSWORD "Your pass"
+
+//#define BIT0	( 1 << 0 )
+//#define BIT1	( 1 << 1 )
+//#define BIT2	( 1 << 2 )
+//#define BIT3	( 1 << 3 )
+//#define BIT4	( 1 << 4 )
+
+
+#define WIFI_DISCONNECTED_BIT BIT0
+#define WIFI_CONNECTED_BIT BIT1
+
+#define PIXEL_GPIO_PIN = GPIO_NUM_26
+
+#ifdef __cplusplus
+}
+#endif
+#endif /* MAIN_CONFIG_H_ */

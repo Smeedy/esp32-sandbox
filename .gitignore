@@ -27,3 +27,8 @@
 *.exe
 *.out
 *.app
+
+# own
+*~
+**/build
+peripheral/neopixel3/coredump\.dat
