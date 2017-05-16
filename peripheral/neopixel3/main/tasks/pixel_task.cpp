@@ -13,9 +13,8 @@
 
 #include "sdkconfig.h"
 #include "WS2812.h"
+#include "pixel_task.h"
 #include "../config.h"
-
-//const gpio_num_t GPIO_PIN = PIXEL_GPIO_PIN;
 
 #define TAG "[PIXEL TASK]"
 
@@ -23,7 +22,7 @@ void pixel_task(void *data) {
 
 	ESP_LOGI(TAG, "starting task");
 
-	WS2812 ws2812 = WS2812(GPIO_NUM_26, 1, RMT_CHANNEL_0);
+	WS2812 ws2812 = WS2812(GPIO_NUM_19, 1, RMT_CHANNEL_0);
 
 	pixel_t current, prev = {0,0,0};
 

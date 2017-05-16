@@ -31,3 +31,7 @@
 # own
 *~
 **/build
+
+peripheral/neopixel3/\.settings/
+
+peripheral/neopixel3/\.cproject
